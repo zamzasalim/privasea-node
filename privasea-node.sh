@@ -78,6 +78,8 @@ docker run -it -v "$HOME/privasea/config:/app/config" privasea/acceleration-node
 # Step 6: Deteksi otomatis nama file keystore
 keystore_file=$(ls $HOME/privasea/config | grep "UTC" | head -n 1)
 
+sleep 3
+
 # Step 7: Ganti nama file keystore menjadi wallet_keystore
 mv $HOME/privasea/config/$keystore_file $HOME/privasea/config/wallet_keystore
 
